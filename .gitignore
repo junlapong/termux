@@ -4,6 +4,8 @@
 .cargo/
 .config/
 .gitconfig
+.gnupg/
+.gradle/
 .httpie/
 .local/
 .m2/
