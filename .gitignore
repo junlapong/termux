@@ -29,3 +29,5 @@ me/
 notes/
 storage/
 works/
+.netrc
+.subversion/

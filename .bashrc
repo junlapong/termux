@@ -19,6 +19,7 @@ alias gst="git status"
 
 # Others
 
+alias heads="http --verify=no --headers"
 alias la="ls -lA"
 alias dlv="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias dlm="youtube-dl -x --embed-thumbnail --audio-format mp3"
