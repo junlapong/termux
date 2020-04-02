@@ -19,6 +19,7 @@ alias gst="git status"
 
 # Others
 
+alias open="/data/data/com.termux/files/usr/bin/termux-open"
 alias heads="http --verify=no --headers"
 alias la="ls -lA"
 alias dlv="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"

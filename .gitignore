@@ -31,3 +31,7 @@ storage/
 works/
 .netrc
 .subversion/
+.degit/
+.vuerc
+.yarnrc
+
