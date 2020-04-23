@@ -2,7 +2,6 @@
 
 [Termux](https://termux.com/) is an Android terminal emulator and Linux environment app that works directly with no rooting or setup required. A minimal base system is installed automatically - additional packages are available using the APT package manager.
 
-<!-- ![](https://termux.com/files/vim-main_framed.png) -->
 <img src="https://termux.com/files/vim-main_framed.png" width="350"/>
 
 ## Installation
@@ -25,8 +24,8 @@ pkg install <package>
 - git
 - golang
 - hub
+- openssh
 - python
-- sshd
 - tmux
 - vim
 
@@ -44,14 +43,32 @@ pip install youtube-dl
 ├── .bash_profile
 ├── .bashrc
 ├── .tmux.conf
-├── bin
-│   ├── termux-file-editor
-│   └── termux-url-opener
-└── tools
+└── bin
     ├── ip.sh
     ├── sshd.sh
+    ├── termux-file-editor
+    ├── termux-url-opener
     └── wrk
 ```
+
+## Setup Storage
+
+[Termux-setup-storage](https://wiki.termux.com/wiki/Termux-setup-storage)
+
+```
+termux-setup-storage
+```
+
+## Setup Git
+
+```
+git config --global user.name "Junlapong L."
+git config --global user.email "junlapong@gmail.com"
+git config --global --list
+```
+
+- [Connecting to GitHub with SSH](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
+- [Set up an SSH key for Bitbucket](https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html)
 
 ## Install Debian Linux
 
@@ -115,3 +132,8 @@ uname -a
 termux-clipboard-set
 termux-clipboard-get
 ```
+
+## Know Issues
+
+- [nodejs error `Segmentation fault`](https://github.com/nodejs/node/issues/2752)
+  - removing node_modules and reinstalling fixed the problem
