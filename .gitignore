@@ -21,6 +21,7 @@
 .vim/
 .viminfo
 .vnc/
+.vue-cli-ui/
 .wget-hsts
 caddy-example/
 debian/

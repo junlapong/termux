@@ -95,6 +95,16 @@ $ cd debian
 $ ~/debian/start-debian.sh
 ```
 
+### Install Node.js
+
+Refer to [Debian Installation Instructions](https://github.com/nodesource/distributions/blob/master/README.md#debinstall)
+
+```
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_12.x | bash -
+apt-get install -y nodejs
+```
+
 ### Install Java
 
 Refer to [How to Install Java on Debian 9](https://linuxize.com/post/install-java-on-debian-9/)
