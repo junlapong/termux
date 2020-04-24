@@ -1,7 +1,8 @@
 .bash_history
 .cache/
 .caddy/
-.cargo/
+.cargo/i
+.composer/
 .config/
 .gitconfig
 .gnupg/
