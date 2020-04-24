@@ -70,11 +70,21 @@ git config --global --list
 - [Connecting to GitHub with SSH](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
 - [Set up an SSH key for Bitbucket](https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html)
 
+
+```
+cd ~/.ssh
+ssh-keygen -t rsa -b 4096 -C "junlapong@gmail.com"
+eval "$(ssh-agent -s)"
+#ssh-add -K ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub | termux-clipboard-set
+```
+
 ## Install Debian Linux
 
 - Install [AnLinux](https://play.google.com/store/apps/details?id=exa.lnx.a)
 - Generate script for setup Debian Linux
 - Open Termux console and follow step as below
+
 
 ```
 $ mkdir debian
