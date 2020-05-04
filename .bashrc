@@ -26,5 +26,8 @@ alias ls="ls --color=auto"
 alias la="ls -lA"
 alias ytv="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias ytm="youtube-dl -x --embed-thumbnail --audio-format mp3"
+alias lg="lazygit"
+alias du1="du -h --max-depth=1"
 
 alias lnf=~/works/line-notify/line-notify
+
