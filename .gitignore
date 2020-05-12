@@ -23,6 +23,7 @@
 .vnc/
 .vue-cli-ui/
 .wget-hsts
+caddy/
 caddy-example/
 debian/
 dump.rdb
