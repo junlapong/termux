@@ -1,7 +1,7 @@
 .bash_history
 .cache/
 .caddy/
-.cargo/i
+.cargo/
 .composer/
 .config/
 .gitconfig
@@ -23,6 +23,7 @@
 .vnc/
 .vue-cli-ui/
 .wget-hsts
+.zsh_history
 caddy/
 caddy-example/
 debian/
@@ -32,6 +33,7 @@ me/
 notes/
 storage/
 works/
+v/
 .netrc
 .subversion/
 .degit/
