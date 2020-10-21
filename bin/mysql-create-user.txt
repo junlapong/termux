@@ -1,0 +1,5 @@
+CREATE USER 'jun'@'localhost' IDENTIFIED BY 'pass';
+
+GRANT ALL PRIVILEGES ON *.* TO 'jun'@'localhost';
+
+FLUSH PRIVILEGES;

@@ -34,9 +34,13 @@ notes/
 storage/
 works/
 v/
+tmp/
+wiki/
 .netrc
 .subversion/
 .degit/
 .vuerc
 .yarnrc
+.mycli*
+.mysql_history
 
