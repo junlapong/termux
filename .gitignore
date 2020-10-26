@@ -1,4 +1,3 @@
-.bash_history
 .cache/
 .caddy/
 .cargo/
@@ -10,10 +9,7 @@
 .httpie/
 .local/
 .m2/
-.node_repl_history
 .npm/
-.python_history
-.sqlite_history
 .ssh/
 .termux/
 .termux_authinfo
@@ -23,11 +19,9 @@
 .vnc/
 .vue-cli-ui/
 .wget-hsts
-.zsh_history
 caddy/
 caddy-example/
 debian/
-dump.rdb
 go/
 me/
 notes/
@@ -41,6 +35,6 @@ wiki/
 .degit/
 .vuerc
 .yarnrc
+*_history
 .mycli*
-.mysql_history
 
