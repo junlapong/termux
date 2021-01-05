@@ -45,3 +45,11 @@ alias du1="du -h --max-depth=1"
 
 alias lnf=~/works/line-notify/line-notify
 
+wt() {
+	$PREFIX/bin/curl "wttr.in/$1"
+}
+
+covid() {
+	$PREFIX/bin/curl -s https://covid19.th-stat.com/api/open/today | jq
+}
+
