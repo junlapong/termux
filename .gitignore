@@ -22,12 +22,12 @@
 caddy/
 caddy-example/
 debian/
+develop/
 go/
 me/
 notes/
 storage/
 works/
-v/
 tmp/
 wiki/
 .netrc
@@ -37,4 +37,8 @@ wiki/
 .yarnrc
 *_history
 .mycli*
+.dart/
+.pub-cache/
+.vmodules/
+covid/
 

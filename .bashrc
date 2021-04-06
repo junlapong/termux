@@ -2,12 +2,14 @@ clear
 
 PS1="\W $ "
 
+export PATH=$PATH:$HOME/bin
+
 # Go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin:$HOME/bin
+export GOPATH=$HOME/develop/go
+export PATH=$GOPATH/bin:$PATH
 
 # Rust
-export PATH=$PATH:$HOME/.cargo/bin
+#export PATH=$PATH:$HOME/.cargo/bin
 
 # Git
 alias gad="git add --dry-run"
@@ -23,6 +25,7 @@ alias gst="git status"
 alias gco="git checkout"
 alias gcm="gco master"
 alias gcd="gco develop"
+alias gci="git clean -nfdx"
 
 # Others
 
@@ -31,7 +34,6 @@ alias ogit="open https://junlapong.github.io/notes/git/"
 alias ogo="open https://junlapong.github.io/go-guide/"
 
 alias curl=curlie
-alias heads="http --verify=no --headers"
 alias ..="cd ../"
 alias ...="cd ../../"
 alias ls="ls --color=auto"
@@ -42,14 +44,20 @@ alias ytm="youtube-dl -x --embed-thumbnail --audio-format mp3"
 alias lg="lazygit"
 alias live="live-server"
 alias du1="du -h --max-depth=1"
-
+alias pbcopy="termux-clipboard-set"
 alias lnf=~/works/line-notify/line-notify
+alias deb="~/debian/start-debian.sh"
+alias coin="watch -tcn5 'coinmon -t 5'"
 
 wt() {
 	$PREFIX/bin/curl "wttr.in/$1"
 }
 
 covid() {
-	$PREFIX/bin/curl -s https://covid19.th-stat.com/api/open/today | jq
+	#$PREFIX/bin/curl -s https://covid19.th-stat.com/api/open/today | jq
+
+	TODAY=`date '+%Y%m%d'`
+	$PREFIX/bin/curl -s https://covid19.th-stat.com/api/open/today > ~/covid/covid_${TODAY}
+	cat ~/covid/covid_${TODAY} | jq
 }
 
