@@ -10,6 +10,7 @@ echo "m) download youtube as mp3 to music folder"
 echo "s) download soundcloud as mp3 to music folder"
 echo "w) wget file to download folder" 
 #echo "x) nothing"
+echo "u) url shorten"
 echo "z) echo"
 
 read CHOICE
@@ -34,8 +35,12 @@ case $CHOICE in
 	;;
 #    x)
 #        echo "bye"
-#	;; 
+#	;;
+	u)
+		termux-open "https://offf.to/$url"
+	;;
     z)
 	echo $0 $1 $2 $3
+	sleep 5
 	;;
 esac
