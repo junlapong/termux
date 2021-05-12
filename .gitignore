@@ -21,8 +21,11 @@
 .wget-hsts
 caddy/
 caddy-example/
-debian/
+debian/debian-binds
+debian/debian-fs
+debian/dev
 develop/
+eth/
 go/
 me/
 notes/

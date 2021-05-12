@@ -5,7 +5,7 @@ OS=`uname -o`
 if [[ $OS == "Android" ]]; then
 	export LD_PRELOAD=${PREFIX}/lib/libtermux-exec.so
 else
-	. ~/develop/debian/path.sh
+	. ~/debian/path.sh
 	alias distro='lsb_release -a'
 fi
 

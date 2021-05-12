@@ -2,10 +2,12 @@ clear
 
 PS1="\W $ "
 
+export TZ="Asia/Bangkok"
+
 export PATH=$PATH:$HOME/bin
 
 # Go
-export GOPATH=$HOME/develop/go
+export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 
 # Rust
@@ -43,7 +45,8 @@ alias ytv="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias ytm="youtube-dl -x --embed-thumbnail --audio-format mp3"
 alias lg="lazygit"
 alias live="live-server"
-alias du1="du -h --max-depth=1"
+alias du1="du -h -d 1"
+alias dus="du -chs"
 alias pbcopy="termux-clipboard-set"
 alias lnf=~/works/line-notify/line-notify
 alias deb="~/debian/start-debian.sh"
@@ -60,4 +63,11 @@ covid() {
 	$PREFIX/bin/curl -s https://covid19.th-stat.com/api/open/today > ~/covid/covid_${TODAY}
 	cat ~/covid/covid_${TODAY} | jq
 }
+
+
+bks () {
+	curl -s https://api.bitkub.com/api/market/ticker?sym=THB_$1
+}
+
+alias bk="watch -tcn3 '$HOME/bitkub.sh'"
 
