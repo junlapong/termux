@@ -6,8 +6,9 @@
 
 ## Installation
 
-- [Termux](https://play.google.com/store/apps/details?id=com.termux)
-- [Termux:API](https://play.google.com/store/apps/details?id=com.termux.api)
+- [F-Droid](https://www.f-droid.org/)
+- Termux]
+- Termux:API
 
 ## Command
 
@@ -32,7 +33,6 @@ pkg install <package>
 ### Additional Packages
 
 ```
-pip install httpie
 pip install scdl
 pip install youtube-dl
 ```
@@ -64,6 +64,7 @@ termux-setup-storage
 ```
 git config --global user.name "Junlapong L."
 git config --global user.email "junlapong@gmail.com"
+git config --global hub.protocol ssh
 git config --global --list
 ```
 
@@ -79,9 +80,22 @@ eval "$(ssh-agent -s)"
 cat ~/.ssh/id_rsa.pub | termux-clipboard-set
 ```
 
+## Hub
+
+```
+touch .config/hub
+```
+
+```
+github.com:
+- user: <USERNAME> 
+  oauth_token: <GITHUB_TOKEN>
+  protocol: https
+```
+
 ## Install Debian Linux
 
-- Install [AnLinux](https://play.google.com/store/apps/details?id=exa.lnx.a)
+- Install __AnLinux__
 - Generate script for setup Debian Linux
 - Open Termux console and follow step as below
 
@@ -107,13 +121,10 @@ apt-get install -y nodejs
 
 ### Install Java
 
-Refer to [How to Install Java on Debian 9](https://linuxize.com/post/install-java-on-debian-9/)
-
 ```
-$ echo 'deb http://ftp.debian.org/debian stretch-backports main' | tee /etc/apt/sources.list.d/stretch-backports.list
-$ apt update
-$ apt install openjdk-11-jdk-headless
-$ java -version
+apt update
+apt install openjdk-11-jdk-headless
+java -version
 ```
 
 To change the default version, use the `update-alternatives` system command:
@@ -125,8 +136,8 @@ update-alternatives --config java
 ### Install Maven
 
 ```
-$ apt install maven
-$ mvn -version
+apt install maven
+mvn -version
 ```
 
 ## Shortcut Key
