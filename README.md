@@ -7,7 +7,7 @@
 ## Installation
 
 - [F-Droid](https://www.f-droid.org/)
-- Termux]
+- Termux
 - Termux:API
 
 ## Command
@@ -101,12 +101,12 @@ github.com:
 
 
 ```
-$ mkdir debian
-$ cd debian
+mkdir debian
+cd debian
 ## paste script from AnLinux
 
 ## start debian and enter as root
-$ ~/debian/start-debian.sh
+~/debian/start-debian.sh
 ```
 
 ### Install Node.js
