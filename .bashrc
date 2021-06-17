@@ -11,7 +11,7 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 
 # Rust
-#export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.cargo/bin
 
 # Git
 alias gad="git add --dry-run"
@@ -25,7 +25,7 @@ alias gpl="git pull"
 alias gr="git remote"
 alias gst="git status"
 alias gco="git checkout"
-alias gcm="gco master"
+alias gcm="gco main"
 alias gcd="gco develop"
 alias gci="git clean -nfdx"
 
@@ -41,6 +41,7 @@ alias ...="cd ../../"
 alias ls="ls --color=auto"
 alias ll="ls -lh"
 alias la="ls -lAh"
+alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 alias ytv="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias ytm="youtube-dl -x --embed-thumbnail --audio-format mp3"
 alias lg="lazygit"
@@ -48,9 +49,11 @@ alias live="live-server"
 alias du1="du -h -d 1"
 alias dus="du -chs"
 alias pbcopy="termux-clipboard-set"
-alias lnf=~/works/line-notify/line-notify
+alias lnf="~/works/line-notify/line-notify"
 alias deb="~/debian/start-debian.sh"
 alias coin="watch -tcn5 'coinmon -t 5'"
+alias tmp="cd ~/tmp"
+alias -s {go,yml,yaml}=vim
 
 wt() {
 	$PREFIX/bin/curl "wttr.in/$1"

@@ -8,6 +8,7 @@
 .gnupg/
 .gradle/
 .httpie/
+.ipfs/
 .local/
 .m2/
 .npm/
