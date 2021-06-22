@@ -21,6 +21,7 @@ pkg install <package>
 
 ### Basic Packages
 
+- bat
 - curl
 - git
 - golang
@@ -33,7 +34,10 @@ pkg install <package>
 ### Additional Packages
 
 ```
+pkg install ffmpeg
+
 pip install scdl
+pip install spotdl
 pip install youtube-dl
 ```
 
