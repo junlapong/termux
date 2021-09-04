@@ -1,14 +1,22 @@
-clear
+#clear
 
 PS1="\W $ "
 
 export TZ="Asia/Bangkok"
 
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/bin:$HOME/.local/bin
 
 # Go
 export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$PATH
+
+# Maven
+export MAVEN_HOME=$HOME/dev/apache-maven-3.8.2
+
+# Gradle
+export GRADLE_HOME=$HOME/dev/gradle-7.2
+
+
+export PATH=$GOPATH/bin:$MAVEN_HOME/bin:$GRADLE_HOME/bin:$PATH
 
 # Rust
 export PATH=$PATH:$HOME/.cargo/bin
@@ -63,10 +71,21 @@ covid() {
 	#$PREFIX/bin/curl -s https://covid19.th-stat.com/api/open/today | jq
 
 	TODAY=`date '+%Y%m%d'`
-	$PREFIX/bin/curl -s https://covid19.th-stat.com/api/open/today > ~/covid/covid_${TODAY}
-	cat ~/covid/covid_${TODAY} | jq
+	# $PREFIX/bin/curl -s https://covid19.th-stat.com/api/open/today > ~/covid/covid_${TODAY}
+	# cat ~/covid/covid_${TODAY} | jq
+	# $PREFIX/bin/curl -s https://covid19.th-stat.com/json/covid19v2/getTodayCases.json | jq
+	curlie -s https://static.easysunday.com/covid-19/getTodayCases.json
 }
 
+vup () {
+	wget -O ~/tmp/Thailand.csv wget https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/country_data/Thailand.csv
+}
+
+vacc () {
+	#curl https://raw.githubusercontent.com/porames/the-researcher-covid-bot/master/components/gis/data/national-vaccination-timeseries.json
+	curl -s https://raw.githubusercontent.com/wiki/porames/the-researcher-covid-data/vaccination/national-vaccination-timeseries.json
+
+}
 
 bks () {
 	curl -s https://api.bitkub.com/api/market/ticker?sym=THB_$1
@@ -74,3 +93,6 @@ bks () {
 
 alias bk="watch -tcn3 '$HOME/bitkub.sh'"
 
+jar_ver () {
+	unzip -q -c $1 META-INF/MANIFEST.MF
+}

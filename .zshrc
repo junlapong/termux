@@ -7,6 +7,10 @@ if [[ $OS == "Android" ]]; then
 else
 	. ~/debian/path.sh
 	alias distro='lsb_release -a'
+	export GOROOT="$HOME/sdk/go1.17"
+	export GOPATH="$HOME/dev/go"
+	export DOCKER_HOME=$HOME/dev/docker/docker
+	export PATH=$GOROOT/bin:$GOPATH/bin:$DOCKER_HOME:$PATH
 fi
 
 #source ~/.bashrc

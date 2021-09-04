@@ -48,4 +48,8 @@ wiki/
 .pub-cache/
 .vmodules/
 covid/
-
+.lesshst
+bin/x10
+dev/
+epay/
+sdk/
