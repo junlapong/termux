@@ -24,35 +24,45 @@ pkg install <package>
 - bat
 - curl
 - git
+- gh
 - golang
 - hub
 - openssh
 - python
 - tmux
 - vim
+- wrk
 
 ### Additional Packages
 
 ```
 pkg install ffmpeg
-
 pip install scdl
 pip install spotdl
 pip install youtube-dl
 ```
 
-## termux files
+### Go Utilities
+
+```
+go install github.com/atotto/clipboard/cmd/gocopy@latest
+go install github.com/atotto/clipboard/cmd/gopaste@latest
+go install github.com/rs/curlie@latest
+go install github.com/rakyll/hey@latest
+```
+
+## Termux files
 
 ```
 ├── .bash_profile
 ├── .bashrc
 ├── .tmux.conf
+├── .zshrc
 └── bin
     ├── ip.sh
     ├── sshd.sh
     ├── termux-file-editor
-    ├── termux-url-opener
-    └── wrk
+    └── termux-url-opener
 ```
 
 ## Setup Storage
@@ -74,7 +84,6 @@ git config --global --list
 
 - [Connecting to GitHub with SSH](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
 - [Set up an SSH key for Bitbucket](https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html)
-
 
 ```
 cd ~/.ssh
