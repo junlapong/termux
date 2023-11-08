@@ -1,4 +1,4 @@
-#clear
+clear
 
 PS1="\W $ "
 
@@ -10,16 +10,13 @@ export PATH=$PATH:$HOME/bin:$HOME/.local/bin
 export GOPATH=$HOME/go
 
 # Maven
-export MAVEN_HOME=$HOME/dev/apache-maven-3.8.2
+#export MAVEN_HOME=$HOME/dev/apache-maven-3.8.2
 
 # Gradle
 export GRADLE_HOME=$HOME/dev/gradle-7.2
 
 
 export PATH=$GOPATH/bin:$MAVEN_HOME/bin:$GRADLE_HOME/bin:$PATH
-
-# Rust
-export PATH=$PATH:$HOME/.cargo/bin
 
 # Git
 alias gad="git add --dry-run"
@@ -28,6 +25,7 @@ alias gb="git branch"
 alias gc="git commit"
 alias gd="git diff"
 alias gl="git log --oneline --graph --decorate --all"
+alias gls="git log --stat"
 alias gp="git push"
 alias gpl="git pull"
 alias gr="git remote"
@@ -42,16 +40,18 @@ alias gci="git clean -nfdx"
 alias open="termux-open"
 alias ogit="open https://junlapong.github.io/notes/git/"
 alias ogo="open https://junlapong.github.io/go-guide/"
+alias ohow="open https://junlapong.github.io/howto"
 
-alias curl=curlie
+# alias curl=curlie
 alias ..="cd ../"
 alias ...="cd ../../"
 alias ls="ls --color=auto"
 alias ll="ls -lh"
 alias la="ls -lAh"
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
-alias ytv="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
-alias ytm="youtube-dl -x --embed-thumbnail --audio-format mp3"
+#alias ytv="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
+alias ytv="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
+alias ytm="yt-dlp -x --embed-thumbnail --audio-format mp3"
 alias lg="lazygit"
 alias live="live-server"
 alias du1="du -h -d 1"
@@ -61,7 +61,7 @@ alias lnf="~/works/line-notify/line-notify"
 alias deb="~/debian/start-debian.sh"
 alias coin="watch -tcn5 'coinmon -t 5'"
 alias tmp="cd ~/tmp"
-alias -s {go,yml,yaml}=vim
+#alias -s {go,yml,yaml}=vim
 
 wt() {
 	$PREFIX/bin/curl "wttr.in/$1"
@@ -96,3 +96,4 @@ alias bk="watch -tcn3 '$HOME/bitkub.sh'"
 jar_ver () {
 	unzip -q -c $1 META-INF/MANIFEST.MF
 }
+
