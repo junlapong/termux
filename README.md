@@ -49,6 +49,7 @@ go install github.com/atotto/clipboard/cmd/gocopy@latest
 go install github.com/atotto/clipboard/cmd/gopaste@latest
 go install github.com/rs/curlie@latest
 go install github.com/rakyll/hey@latest
+go install github.com/ipinfo/cli/ipinfo@latest
 ```
 
 ## Termux files
